@@ -1,11 +1,10 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  generate_doxygen_job:
     runs-on: ubuntu-latest
     name: Generate documentation using doxygen
     steps:
-      # このリポジトリのプライベートアクションを使うには、リポジトリをチェックアウトしなければならない
       - name: Checkout
         uses: actions/checkout@v2
       - name: doxygen
