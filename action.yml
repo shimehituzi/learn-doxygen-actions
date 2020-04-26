@@ -1,0 +1,12 @@
+name: 'Doxygen html generate'
+description: 'Generate documentation on a commented project using doxygen'
+inputs:
+  doxyfile-path:
+    description: 'Path to Doxyfile'
+    required: true
+    default: './Doxyfile'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.doxyfile-path }}
