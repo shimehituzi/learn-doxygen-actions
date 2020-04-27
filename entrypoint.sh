@@ -1,2 +1,3 @@
 #!/bin/sh
-doxygen $1
+cd $1
+doxygen $2
